@@ -78,6 +78,27 @@ The file system is implemented using the following data structures:
 4. **Commands:**
    - Use commands such as `mkdir`, `ls`, `cd`, `touch`, `mv`, `cp`, `rm`, `save`, `load`, and `exit` to interact with the file system.
 
-5. **Save and Load State:**
-   - Use the `save` command to save the current state to a file.
-   - Use the `load` command to load a previously saved state from a file.
+
+## Save and Load Operations
+
+### Save Operation
+
+The `save` operation allows you to save the current state of the file system to a file. This is useful for preserving the file system structure between program executions.
+
+To save the state, use the following command:
+
+
+
+```bash
+save
+```
+This command will save the file system state to a file named file_system_state.txt` in the current working directory.
+
+### Load Operation
+
+The `load` operation enables you to restore the file system to a previously saved state. It reads the file system structure from a file and updates the program's internal representation.
+```bash
+load
+```
+
+This command will load the file system state from the `file_system_state.txt` file. Ensure that the file exists and is in the correct format.
